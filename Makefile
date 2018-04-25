@@ -1,5 +1,7 @@
-node_modules/: package.json
+node_modules: package.json
 	npm install
 
-dist/bundle.js: src/*.js node_modules/
+webpack: src/*.js node_modules/
 	./node_modules/.bin/webpack
+
+all: node_modules webpack
