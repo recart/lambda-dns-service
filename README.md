@@ -13,4 +13,6 @@ So, for instance, these might be:
 
 Records have a deliberately short (5-second) TTL.
 
+The original [blog post].
+
 [blog post]: https://monzo.com/blog/2017/11/29/very-robust-etcd/ "Very Robust etcd"
