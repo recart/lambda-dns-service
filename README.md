@@ -1,18 +1,11 @@
 # `lambda-dns`
 
 An AWS Lambda function to maintain Route 53 DNS records from EC2 events, using
-the `role` tag on instances. Each instance is visible in two records:
+the `r53-domain-name` and `r53-zone-ids` tag on instances.
 
-* `${role}.${instance-az}.${environment-domain-name}`
-* `${role}.${instance-region}.${environment-domain-name}`
-
-So, for instance, these might be:
-
-* `k8s-worker.eu-west-1a.i.prod.prod-ffs.io`
-* `k8s-worker.eu-west-1.i.prod.prod-ffs.io`
+`r53-domain-name`: my-instance-3.myhostedzone.local
+`r53-zone-ids`: comma separated list of Route53 zone IDs `Z14X0X86GHO32N,Z1EDHAKW9123R,Z1936S67FIY12C`
 
 Records have a deliberately short (5-second) TTL.
 
-The original [blog post].
-
-[blog post]: https://monzo.com/blog/2017/11/29/very-robust-etcd/ "Very Robust etcd"
+The `r53-domain-name` will be set with an A record to the instance's private IPv4 address in all the zones provided in the `r53-zone-ids`.
