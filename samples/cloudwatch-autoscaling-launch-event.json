@@ -5,9 +5,9 @@
   "source": "aws.autoscaling",
   "account": "827362820492",
   "time": "2017-10-11T21:31:47Z",
-  "region": "eu-west-1",
+  "region": "us-east-1",
   "resources": [
-    "arn:aws:ec2:eu-west-1:827362820492:instance/i-d15361f"
+    "arn:aws:ec2:us-east-1:281674856106:instance/i-04e87efcf2439df62"
   ],
   "detail": {
     "StatusCode": "InProgress",
