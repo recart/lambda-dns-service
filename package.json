@@ -3,7 +3,7 @@
         "aws-sdk": "^2.481.0",
         "babel-polyfill": "^6.26.0",
         "babel-runtime": "^6.26.0",
-        "lodash": "^4.17.11"
+        "lodash": "^4.17.13"
     },
     "description": "AWS Lambda function to maintain Route53 DNS records from CloudWatch events",
     "license": "UNLICENSED",
